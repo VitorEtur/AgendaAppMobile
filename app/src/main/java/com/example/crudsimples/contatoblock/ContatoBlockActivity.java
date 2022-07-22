@@ -17,7 +17,7 @@ import com.example.crudsimples.contatonormal.ListarContatosActivity;
 import java.util.ArrayList;
 
 public class ContatoBlockActivity extends AppCompatActivity {
-
+/*Declarando atributos*/
     private EditText nomeblock;
     private EditText telefoneblock;
     private EditText cidadeblock;
@@ -28,12 +28,12 @@ public class ContatoBlockActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato_block);
-
+/*Vinculandos os campos do formulário aos atributos*/
         nomeblock = findViewById(R.id.editNomeBlock);
         telefoneblock = findViewById(R.id.editTelefoneBlock);
         cidadeblock = findViewById(R.id.editCidadeBlock);
         bkdao = new ContatoBlockDAO(this);
-
+/*Metodo intent para chamar outra activity*/
         Intent it = getIntent();
         if (it.hasExtra("contatoblock")){
             contatoBlock = (ContatoBlock) it.getSerializableExtra("contatoblock");
@@ -43,7 +43,7 @@ public class ContatoBlockActivity extends AppCompatActivity {
 
         }
     }
-
+/*Metodo para salvar o contato*/
     public void salvar(View view) {
 
         if (contatoBlock == null) {
@@ -65,8 +65,8 @@ public class ContatoBlockActivity extends AppCompatActivity {
             Toast.makeText(this, "Contato bloqueado foi atualizado", Toast.LENGTH_SHORT).show();
             //*********** Chamar outra tela ao clicar no botão Salvar
             Intent intent = new Intent(getApplicationContext(), ListarContatosBloqueadosActivity.class);
-            startActivity(intent);
-            finish();
+            startActivity(intent); /*Inicia a activity*/
+            finish(); /*finaliza a activity anterior*/
         }
     }
 }

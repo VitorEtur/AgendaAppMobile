@@ -12,17 +12,19 @@ import com.example.crudsimples.contatoimportante.ContatoImportante;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*Classe de acesso aos dados.*/
 public class ContatoBlockDAO {
-
+/*Atributos*/
     private Conexao conexao;
     private SQLiteDatabase banco;
-
+/*    //************ Método consultor contato
+ */
     public ContatoBlockDAO(Context context){
         conexao = new Conexao(context);
         banco = conexao.getWritableDatabase();
     }
-
+/*    //************ Método inserir contato
+ */
     public long inserir(ContatoBlock contatoBlock) {
         ContentValues values = new ContentValues();
         values.put("nome", contatoBlock.getNomeblock());
@@ -32,6 +34,8 @@ public class ContatoBlockDAO {
     }
 
     public List<ContatoBlock> obterTodosBlocks(){
+        /*//*************** Associando o formulario com as colunas do banco de dados
+         */
         List<ContatoBlock> contatoBlocks = new ArrayList<>();
         Cursor cursor = banco.query("contatoblock", new String[]{"id", "nome", "telefone", "cidade"},
                 null, null, null, null, null);
@@ -45,11 +49,11 @@ public class ContatoBlockDAO {
         }
         return contatoBlocks;
     }
-
+/*método para excluir contato bloqueado*/
     public void excluirblock(ContatoBlock contatoBlock){
         banco.delete("contatoblock", "id = ?", new String[] {contatoBlock.getId().toString()} );
     }
-
+/*método para atualizar contato bloqueado*/
     public void atualizarblock(ContatoBlock contatoBlock){
         ContentValues values = new ContentValues();
         values.put("nome", contatoBlock.getNomeblock());

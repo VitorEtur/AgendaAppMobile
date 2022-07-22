@@ -26,11 +26,11 @@ import com.example.crudsimples.contatonormal.ListarContatosActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*Classe q ira fazer parte do Listview na parte de listar usuarios*/
 public class ListarContatosBloqueadosActivity extends AppCompatActivity {
 
     Button btnorma, btimportant;
-
+/*Atributos*/
     private ListView listViewblock;
     private ContatoBlockDAO bkdao;
     private List<ContatoBlock> contatoBlocks;
@@ -42,7 +42,7 @@ public class ListarContatosBloqueadosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_contatos_bloqueados);
 
-        btnorma = findViewById(R.id.button_nav_norma);
+        btnorma = findViewById(R.id.button_nav_norma); /*LIGANDO OS BOTÕES AOS BOTOES DO LAYOUT*/
         btimportant = findViewById(R.id.button_nav_importan);
 
         btimportant.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +59,7 @@ public class ListarContatosBloqueadosActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent telanorma=new Intent(getApplicationContext(), ListarContatosActivity.class);
                 startActivity(telanorma);
-                finish();
+                finish(); /*método intent para chamar uma nova janela ao abrir*/
             }
         });
 
@@ -101,7 +101,7 @@ public class ListarContatosBloqueadosActivity extends AppCompatActivity {
 
     }
 
-    public void procuraContatoBlock(String nome) {
+    public void procuraContatoBlock(String nome) { /*método de procurar contato bloqueado*/
 
         contatoBlocksFiltrados.clear();
         for (ContatoBlock a : contatoBlocks) {
@@ -114,7 +114,7 @@ public class ListarContatosBloqueadosActivity extends AppCompatActivity {
 
     }
 
-    public void excluirblock(MenuItem item) {
+    public void excluirblock(MenuItem item) { /*método de excluir contato bloqueado*/
         AdapterView.AdapterContextMenuInfo menuInfo3 = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
 
         final ContatoBlock contatoBlockExcluir = contatoBlocksFiltrados.get(menuInfo3.position);
@@ -135,13 +135,13 @@ public class ListarContatosBloqueadosActivity extends AppCompatActivity {
         dialog.show(); //********* Mostrar dialogo se usuário realmente deseja excluir o contato
     }
 
-    public void cadastrarblock(MenuItem item){
+    public void cadastrarblock(MenuItem item){ /*Método de cadastrar contato bloqueado*/
         Intent it = new Intent(this, ContatoBlockActivity.class);
         startActivity(it);
 
     }
 
-    public void atualizarblock(MenuItem item){
+    public void atualizarblock(MenuItem item){ /*Metodo de atualizar contato bloqueado*/
 
         AdapterView.AdapterContextMenuInfo menuInfo3 =
                 (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();

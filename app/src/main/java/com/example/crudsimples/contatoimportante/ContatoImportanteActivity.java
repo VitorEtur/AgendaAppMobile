@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.crudsimples.R;
 
 public class ContatoImportanteActivity extends AppCompatActivity {
+    /*Declarando atributos*/
 
     private EditText nomeimportante;
     private EditText cidadeimportante;
@@ -22,11 +23,13 @@ public class ContatoImportanteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato_importante);
+        /*Vinculandos os campos do formulário aos atributos*/
 
         nomeimportante = findViewById(R.id.editNomeBlock);
         cidadeimportante = findViewById(R.id.editCidadeBlock);
         telefoneimportante = findViewById(R.id.editTelefoneBlock);
         ctdao = new ContatoImportanteDAO(this);
+        /*Metodo intent para chamar outra activity*/
 
         Intent it = getIntent();
         if (it.hasExtra("contatoimportante")){
@@ -37,6 +40,7 @@ public class ContatoImportanteActivity extends AppCompatActivity {
 
         }
     }
+    /*Metodo para salvar o contato*/
 
     public void salvar(View view){
 
@@ -59,8 +63,8 @@ public class ContatoImportanteActivity extends AppCompatActivity {
             Toast.makeText(this, "Contato foi atualizado", Toast.LENGTH_SHORT).show();
             //*********** Chamar outra tela ao clicar no botão Salvar
             Intent intent = new Intent(getApplicationContext(), ListarContatosImportantesActivity.class);
-            startActivity(intent);
-            finish();
+            startActivity(intent); /*inicia a activity*/
+            finish(); /*finaliza a activity anterior*/
         }
     }
 }
