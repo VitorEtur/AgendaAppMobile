@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:icon="@android:drawable/ic_menu_add"
-        android:onClick="cadastrar"
         android:title="Cadastrar"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"
+        android:onClick="cadastrarblock"/>
     <item
-        android:id="@+id/app_bar_search"
+        android:id="@+id/app_bar_search_block"
         android:icon="?android:attr/actionModeWebSearchDrawable"
         android:title="Consultar"
         app:actionViewClass="android.widget.SearchView"

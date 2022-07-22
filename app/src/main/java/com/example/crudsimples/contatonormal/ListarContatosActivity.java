@@ -1,8 +1,7 @@
-package com.example.crudsimples;
+package com.example.crudsimples.contatonormal;
 //********* Importando biblioetcas que iremos utilizar
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,18 +11,23 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import com.example.crudsimples.MainActivity;
+import com.example.crudsimples.R;
+import com.example.crudsimples.contatoblock.ListarContatosBloqueadosActivity;
+import com.example.crudsimples.contatoimportante.ListarContatosImportantesActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 //*************** Classe para listar os contatos salvos
 public class ListarContatosActivity extends AppCompatActivity {
 
+    Button botaoimportantetela, botaoblocktela;
     //*************** ATRIBUTOS
     private ListView listView;
     private ContatoDAO contatoDAO;
@@ -43,10 +47,31 @@ public class ListarContatosActivity extends AppCompatActivity {
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //getSupportActionBar().hide();
-
         setContentView(R.layout.activity_listar_contatos);
 
-        listView = findViewById(R.id.lista_contatos);
+        botaoblocktela=findViewById(R.id.button_nav_importan);
+        botaoimportantetela=findViewById(R.id.button_nav_norma);
+
+        botaoimportantetela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaimportante=new Intent(getApplicationContext(), ListarContatosImportantesActivity.class);
+                startActivity(telaimportante);
+                finish();
+            }
+        });
+
+        botaoblocktela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telablock  =new Intent(getApplicationContext(), ListarContatosBloqueadosActivity.class);
+                startActivity(telablock);
+                finish();
+            }
+        });
+
+
+        listView = findViewById(R.id.lista_contatosblock);
         contatoDAO = new ContatoDAO(this);
         contatos = contatoDAO.obterTodos();
         contatosFiltrados.addAll(contatos);
@@ -137,6 +162,7 @@ public class ListarContatosActivity extends AppCompatActivity {
     public void cadastrar(MenuItem item) {
         Intent it = new Intent(this, MainActivity.class);
         startActivity(it);
+
     }
     //********* Método atualizar o cadastro do contato
     public void atualizar(MenuItem item) {

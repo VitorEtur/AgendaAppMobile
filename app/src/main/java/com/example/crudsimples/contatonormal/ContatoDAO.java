@@ -1,9 +1,11 @@
-package com.example.crudsimples;
+package com.example.crudsimples.contatonormal;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.crudsimples.Database.Conexao;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.crudsimples;
+package com.example.crudsimples.contatonormal;
 
 import android.app.Activity;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.crudsimples.R;
 
 import java.util.List;
 

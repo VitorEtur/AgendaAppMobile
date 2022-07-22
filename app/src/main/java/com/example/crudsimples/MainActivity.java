@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.crudsimples.contatonormal.Contato;
+import com.example.crudsimples.contatonormal.ContatoDAO;
+import com.example.crudsimples.contatonormal.ListarContatosActivity;
 
 public class MainActivity extends AppCompatActivity {
     //*********** Declarando atributos
@@ -28,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 //*********** Vinculandos os campos do formulário aos atributos
-        nome = findViewById(R.id.editNome);
-        telefone = findViewById(R.id.editTelefone);
-        cidade = findViewById(R.id.editCidade);
+        nome = findViewById(R.id.editNomeBlock);
+        telefone = findViewById(R.id.editTelefoneBlock);
+        cidade = findViewById(R.id.editCidadeBlock);
         contatoDAO = new ContatoDAO(this);
 
         Intent it = getIntent();
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             //*********** Chamar outra tela ao clicar no botão Salvar
             Intent intent = new Intent(getApplicationContext(), ListarContatosActivity.class);
             startActivity(intent);
+            finish();
         }else{
             contato.setNome(nome.getText().toString());
             contato.setTelefone(telefone.getText().toString());
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             //*********** Chamar outra tela ao clicar no botão Salvar
             Intent intent = new Intent(getApplicationContext(), ListarContatosActivity.class);
             startActivity(intent);
+            finish();
         }
 
 

@@ -1,4 +1,4 @@
-package com.example.crudsimples;
+package com.example.crudsimples.contatonormal;
 
 import java.io.Serializable;
 //*********** Implemento Serializable para colocar nos inputs extras

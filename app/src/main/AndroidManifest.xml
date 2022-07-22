@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.crudsimples">
 
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,10 +14,22 @@
         android:theme="@style/Theme.CrudSimples"
         tools:targetApi="31">
         <activity
+            android:name=".contatoblock.ListarContatosBloqueadosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contatoblock.ContatoBlockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contatoimportante.ListarContatosImportantesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contatoimportante.ContatoImportanteActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ListarContatosActivity"
+            android:name=".contatonormal.ListarContatosActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

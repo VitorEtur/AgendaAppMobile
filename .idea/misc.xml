@@ -4,12 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/drawable/aaaa.xml" value="0.2155" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/drawable/contatoimportanteicon_foreground.xml" value="0.1" />
         <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
-        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_listar_contatos.xml" value="0.25" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_contato_block.xml" value="0.33" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_contato_importante.xml" value="0.22" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_listar_contatos.xml" value="0.33" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_listar_contatos_bloqueados.xml" value="0.25" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_listar_contatos_importantes.xml" value="0.25" />
         <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_main2.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_tela2_contato_importante.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/activity_tela_inicial.xml" value="0.25" />
         <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/layout/item.xml" value="0.33" />
         <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/menu/menu_contexto.xml" value="0.25" />
-        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/menu/menu_principal.xml" value="0.25" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/menu/menu_contexto_block.xml" value="0.25" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/menu/menu_contexto_importante.xml" value="0.25" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/menu/menu_principal.xml" value="0.33" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/menu/menu_principal_block.xml" value="0.209375" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/menu/menu_principal_importante.xml" value="0.209375" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/mipmap-anydpi-v26/contatoimportanteicon.xml" value="0.1" />
+        <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/mipmap-anydpi-v26/contatoimportanteicon_round.xml" value="0.1" />
         <entry key="..\:/Users/Hustlei/AndroidStudioProjects/CrudSimples2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1945" />
       </map>
     </option>
